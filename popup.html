@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zrzut Ekranu</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Nadal potrzebujemy tego dla efektu 'ripple' -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@material/web/all.js?module"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 2c-1.11 0-2 .89-2 2v16c0 1.11.89 2 2 2h12c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2H6zm0 2h12v12H6V4zm2 13h8v2H8v-2z"></path></svg>
+        <span>Screenshot</span>
+    </div>
+
+    <div class="action-list">
+        <div id="capture-visible" class="action-card">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 3h18v18H3V3m2 2v14h14V5H5m2 2h10v10H7V7m2 2v6h6V9H9z"></path></svg>
+            <span class="action-label">Visible area</span>
+            <md-ripple></md-ripple>
+        </div>
+        <div id="capture-full" class="action-card">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m0 2v14h14V5H5m2 2h10v3H7V7m0 5h10v2H7v-2z"></path></svg>
+            <span class="action-label">Whole page</span>
+            <md-ripple></md-ripple>
+        </div>
+        <div id="capture-area" class="action-card">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 15h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V9H3v2zm0-6v2h2V5H3zm4 14h2v-2H7v2zm8 0h2v-2h-2v2zm-4 0h2v-2h-2v2zM19 3v2h2V3h-2zm-4 2H7V3h8v2zm4 14h2v-2h-2v2zm0-4h2v-2h-2v2zm0-4h2v-2h-2v2z"></path></svg>
+            <span class="action-label">Choose area</span>
+            <md-ripple></md-ripple>
+        </div>
+    </div>
+    
+    <md-divider></md-divider>
+
+    <div class="settings">
+        <span class="settings-label">Format:</span>
+        <!-- Niestandardowy przełącznik formatu -->
+        <div class="format-selector">
+            <button id="format-png" class="format-btn selected">PNG</button>
+            <button id="format-jpg" class="format-btn">JPG</button>
+        </div>
+    </div>
+    
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>

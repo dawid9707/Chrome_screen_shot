@@ -1,0 +1,83 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 300px;
+    background-color: #fef7ff; 
+    color: #1d1b20;
+    margin: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 16px 8px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.header svg { fill: #49454f; }
+.action-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 12px;
+}
+.action-card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background-color: #e6e0e9;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+.action-card:hover { background-color: #e8def8; }
+.action-card svg { fill: #49454f; }
+.action-label {
+    color: #1d1b20;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+md-divider { margin: 4px 0; }
+
+/* === NOWA SEKCJA USTAWIEŃ === */
+.settings {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px 16px;
+}
+.settings-label {
+    font-size: 0.9rem;
+    color: #49454f;
+    font-weight: 500;
+}
+
+/* Niestandardowy przełącznik formatu */
+.format-selector {
+    display: flex;
+    border: 1px solid #cac4d0; /* Outline color */
+    border-radius: 100px; /* Pill shape */
+    overflow: hidden;
+}
+
+.format-btn {
+    background-color: transparent;
+    border: none;
+    padding: 6px 16px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #49454f;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.format-btn.selected {
+    background-color: #e8def8; /* Primary-Container color for selected */
+    color: #1d1b20;
+}
